@@ -2,7 +2,7 @@
   "profiles": {
     "OpenRA.Utility": {
       "commandName": "Project",
-      "commandLineArgs": "all --docs {DEV_VERSION}",
+      "commandLineArgs": "all --docs ywen-special",
       "environmentVariables": {
         "ENGINE_DIR": ".."
       }

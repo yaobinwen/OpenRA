@@ -1,6 +1,6 @@
 Metadata:
-	Title: mod-title
-	Version: {DEV_VERSION}
+	Title: Red Alert
+	Version: ywen-special
 	Website: https://www.openra.net
 	WebIcon32: https://www.openra.net/images/icons/ra_32x32.png
 	WindowTitle: mod-windowtitle
@@ -67,7 +67,7 @@ FileSystem: ContentInstallerFileSystem
 
 MapFolders:
 	ra|maps: System
-	~^SupportDir|maps/ra/{DEV_VERSION}: User
+	~^SupportDir|maps/ra/ywen-special: User
 
 Rules:
 	ra|rules/misc.yaml
