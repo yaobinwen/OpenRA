@@ -19,7 +19,7 @@ Linux
 
 .NET 8 is required to compile OpenRA. The [.NET 8 download page](https://dotnet.microsoft.com/download/dotnet/8.0) provides repositories for various package managers and binary releases for several architectures.
 
-To compile OpenRA, run `make` from the command line. After this one can run the game with `./launch-game.sh`. It is also possible to specify the mod you wish to run from the command line, e.g. with `./launch-game.sh Game.Mod=ts` if you wish to try the experimental Tiberian Sun mod.
+To compile OpenRA, run `make` from the command line. After this one can run the game with `./launch-game.sh`. It is also possible to specify the mod you wish to run from the command line, e.g. with `./launch-game.sh Game.Mod=ts` if you wish to try the experimental Red Alert mod.
 
 The default behaviour on the x86_64 architecture is to download several pre-compiled native libraries using the Nuget packaging manager. If you prefer to use system libraries, compile instead using `make TARGETPLATFORM=unix-generic`.
 
