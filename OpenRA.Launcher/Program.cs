@@ -17,9 +17,12 @@ namespace OpenRA.Launcher
 {
 	static class Program
 	{
+		// NOTE(ywen): This should be the main entry point.
 		[STAThread]
 		static int Main(string[] args)
 		{
+			Console.WriteLine("Now the legend begins...");
+
 			if (Debugger.IsAttached || args.Contains("--just-die"))
 			{
 				try
