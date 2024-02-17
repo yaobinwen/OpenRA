@@ -181,6 +181,8 @@ namespace OpenRA
 
 		public static event Action BeforeGameStart = () => { };
 		public static event Action AfterGameStart = () => { };
+
+		// NOTE(ywen): This might be where a game (not the lobby) is started...
 		internal static void StartGame(string mapUID, WorldType type)
 		{
 			// Dispose of the old world before creating a new one.
