@@ -19,11 +19,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>{DEV_VERSION}</string>
+	<string>ywen-special</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>{DEV_VERSION}</string>
+	<string>ywen-special</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>{MINIMUM_SYSTEM_VERSION}</string>
 	<key>NSPrincipalClass</key>
