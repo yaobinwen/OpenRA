@@ -264,16 +264,29 @@ namespace OpenRA
 		static IEnumerable<string> GetSupportDirs(ModRegistration registration)
 		{
 			var sources = new HashSet<string>(4);
-			if (registration.HasFlag(ModRegistration.System))
-				sources.Add(Platform.GetSupportDir(SupportDirType.System));
+			if (registration.HasFlag(ModRegistration.System)) {
+				var supportDir = Platform.GetSupportDir(SupportDirType.System);
+				Log.Write("debug", $"Adding system support directory: {supportDir}");
+				sources.Add(supportDir);
+			}
 
 			if (registration.HasFlag(ModRegistration.User))
 			{
+				string supportDir = null;
+
 				// User support dir may be using the modern or legacy value, or overridden by the user
 				// Add all the possibilities and let the HashSet ignore the duplicates
-				sources.Add(Platform.GetSupportDir(SupportDirType.User));
-				sources.Add(Platform.GetSupportDir(SupportDirType.ModernUser));
-				sources.Add(Platform.GetSupportDir(SupportDirType.LegacyUser));
+				supportDir = Platform.GetSupportDir(SupportDirType.User);
+				Log.Write("debug", $"Adding user support directory: {supportDir}");
+				sources.Add(supportDir);
+
+				supportDir = Platform.GetSupportDir(SupportDirType.ModernUser);
+				Log.Write("debug", $"Adding modern user support directory: {supportDir}");
+				sources.Add(supportDir);
+
+				supportDir = Platform.GetSupportDir(SupportDirType.LegacyUser);
+				Log.Write("debug", $"Adding legacy user support directory: {supportDir}");
+				sources.Add(supportDir);
 			}
 
 			return sources;
