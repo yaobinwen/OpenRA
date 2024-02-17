@@ -20,11 +20,8 @@ if [ z"${*#*Game.Mod=}" = z"$*" ]
 then
 	if command -v zenity > /dev/null
 	then
-		TITLE=$(zenity --title='Launch OpenRA' --list --hide-header --text 'Select game mod:' --column 'Game mod' 'Red Alert' 'Tiberian Dawn' 'Dune 2000' 'Tiberian Sun' || echo "cancel")
-		if [ "$TITLE" = "Tiberian Dawn" ]; then MODARG='Game.Mod=cnc'
-		elif [ "$TITLE" = "Dune 2000" ]; then MODARG='Game.Mod=d2k'
-		elif [ "$TITLE" = "Tiberian Sun" ]; then MODARG='Game.Mod=ts'
-		elif [ "$TITLE" = "Red Alert" ]; then MODARG='Game.Mod=ra'
+		TITLE=$(zenity --title='Launch OpenRA' --list --hide-header --text 'Select game mod:' --column 'Game mod' 'Red Alert' || echo "cancel")
+		if [ "$TITLE" = "Red Alert" ]; then MODARG='Game.Mod=ra'
 		else exit 0
 		fi
 	else

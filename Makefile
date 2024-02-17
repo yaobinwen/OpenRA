@@ -134,15 +134,6 @@ check-scripts:
 
 test: all
 	@echo
-	@echo "Testing Tiberian Sun mod MiniYAML..."
-	@./utility.sh ts --check-yaml
-	@echo
-	@echo "Testing Dune 2000 mod MiniYAML..."
-	@./utility.sh d2k --check-yaml
-	@echo
-	@echo "Testing Tiberian Dawn mod MiniYAML..."
-	@./utility.sh cnc --check-yaml
-	@echo
 	@echo "Testing Red Alert mod MiniYAML..."
 	@./utility.sh ra --check-yaml
 
