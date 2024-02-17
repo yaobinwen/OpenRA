@@ -326,6 +326,8 @@ namespace OpenRA
 				Platform.OverrideSupportDir(supportDirArg);
 
 			Console.WriteLine($"Platform is {Platform.CurrentPlatform} ({Platform.CurrentArchitecture})");
+			Console.WriteLine($"Platform engine directory: {Platform.EngineDir}");
+			Console.WriteLine($"Platform support directory: {Platform.SupportDir}");
 
 			// Load the engine version as early as possible so it can be written to exception logs
 			try
