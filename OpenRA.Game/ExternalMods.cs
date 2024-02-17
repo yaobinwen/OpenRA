@@ -77,6 +77,7 @@ namespace OpenRA
 				{
 					try
 					{
+						Console.WriteLine($"Loading external mod at {path}");
 						var yaml = MiniYaml.FromFile(path, stringPool: stringPool).First().Value;
 						LoadMod(yaml, path);
 					}
