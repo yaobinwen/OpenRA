@@ -28,6 +28,7 @@ namespace OpenRA.Mods.Common.Traits
 		[Desc("Actor types that are able to produce MCVs.")]
 		public readonly HashSet<string> McvFactoryTypes = new();
 
+		// NOTE(ywen): This variable controls how many MCVs an AI should maintain.
 		[Desc("Try to maintain at least this many ConstructionYardTypes, build an MCV if number is below this.")]
 		public readonly int MinimumConstructionYardCount = 1;
 

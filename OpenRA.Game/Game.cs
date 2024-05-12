@@ -318,8 +318,11 @@ namespace OpenRA
 		static void Initialize(Arguments args)
 		{
 			var engineDirArg = args.GetValue("Engine.EngineDir", null);
-			if (!string.IsNullOrEmpty(engineDirArg))
+			if (!string.IsNullOrEmpty(engineDirArg)) {
+				// If the user provides the engine directory on the command line, then override the
+				// default one on the platform.
 				Platform.OverrideEngineDir(engineDirArg);
+			}
 
 			var supportDirArg = args.GetValue("Engine.SupportDir", null);
 			if (!string.IsNullOrEmpty(supportDirArg))

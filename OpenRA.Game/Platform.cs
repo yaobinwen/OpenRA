@@ -19,6 +19,10 @@ namespace OpenRA
 {
 	public enum PlatformType { Unknown, Windows, OSX, Linux }
 
+	// System: At the system level.
+	// ModernUser: $HOME/.config/openra
+	// LegacyUser: $HOME/.openra
+	// User: ??? TODO(ywen): What is this directory type?
 	public enum SupportDirType { System, ModernUser, LegacyUser, User }
 
 	public static class Platform
@@ -63,6 +67,7 @@ namespace OpenRA
 			return PlatformType.Unknown;
 		}
 
+		// The .NET runtime version.
 		public static string RuntimeVersion
 		{
 			get
@@ -148,6 +153,7 @@ namespace OpenRA
 		/// <summary>
 		/// Directory containing user-specific support files (settings, maps, replays, game data, etc).
 		/// </summary>
+		// `=>` is a lambda operator.
 		public static string SupportDir => GetSupportDir(SupportDirType.User);
 
 		public static string GetSupportDir(SupportDirType type)
